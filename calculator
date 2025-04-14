@@ -1,0 +1,65 @@
+Here’s a simple **C# calculator** app that runs in the console and supports basic arithmetic operations: addition, subtraction, multiplication, and division.
+
+```csharp
+using System;
+
+class Calculator
+{
+    static void Main()
+    {
+        double num1, num2, result;
+        char operation;
+
+        Console.WriteLine("Simple Calculator in C#");
+
+        Console.Write("Enter first number: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter operator (+, -, *, /): ");
+        operation = Convert.ToChar(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+
+        switch (operation)
+        {
+            case '+':
+                result = num1 + num2;
+                Console.WriteLine($"Result: {num1} + {num2} = {result}");
+                break;
+            case '-':
+                result = num1 - num2;
+                Console.WriteLine($"Result: {num1} - {num2} = {result}");
+                break;
+            case '*':
+                result = num1 * num2;
+                Console.WriteLine($"Result: {num1} * {num2} = {result}");
+                break;
+            case '/':
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                    Console.WriteLine($"Result: {num1} / {num2} = {result}");
+                }
+                else
+                {
+                    Console.WriteLine("Error: Division by zero!");
+                }
+                break;
+            default:
+                Console.WriteLine("Invalid operator.");
+                break;
+        }
+
+        Console.WriteLine("Press any key to exit...");
+        Console.ReadKey();
+    }
+}
+```
+
+### Features:
+- Runs in the console
+- Handles basic arithmetic
+- Validates against division by zero
+
+Want a **GUI version using Windows Forms** or **WPF**? Let me know!
